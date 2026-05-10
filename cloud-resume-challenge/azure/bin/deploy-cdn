@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+set -e
+
+echo "Starting CDN / Static Web App deployment via Ansible..."
+ansible-playbook playbooks/deploy-cdn.yml

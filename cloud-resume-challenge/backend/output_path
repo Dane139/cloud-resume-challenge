@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Test1",
+    "handle": "test1'",
+    "thumbnail": "placeholder",
+    "description": "limpsum",
+    "body_html": "<h1>Cloud Resume Challenge</h1>\n<p>This is my very first cloud project! I built a complete serverless web application using <strong>AWS</strong> to host my resume online and track visitor counts.</p>\n<h2>The Tech Stack</h2>\n<ul>\n<li><strong>Frontend:</strong> Hosted on S3 and distributed globally with CloudFront.</li>\n<li><strong>Backend:</strong> A Python Lambda function triggered by API Gateway.</li>\n<li><strong>Database:</strong> DynamoDB to store the visitor count.</li>\n<li><strong>CI/CD:</strong> GitHub Actions for automated deployments.</li>\n</ul>\n<p>Check out the architecture and code on my <a href=\"https://github.com/Dane139/cloud-resume-challenge\">GitHub Repository</a>.</p>"
+  },
+  {
+    "name": "Test2",
+    "handle": "test2'",
+    "thumbnail": "placeholder",
+    "description": "limpsum",
+    "body_html": "<h1>Cloud Resume Challenge</h1>\n<p>This is my very first cloud project! I built a complete serverless web application using <strong>AWS</strong> to host my resume online and track visitor counts.</p>\n<h2>The Tech Stack</h2>\n<ul>\n<li><strong>Frontend:</strong> Hosted on S3 and distributed globally with CloudFront.</li>\n<li><strong>Backend:</strong> A Python Lambda function triggered by API Gateway.</li>\n<li><strong>Database:</strong> DynamoDB to store the visitor count.</li>\n<li><strong>CI/CD:</strong> GitHub Actions for automated deployments.</li>\n</ul>\n<p>Check out the architecture and code on my <a href=\"https://github.com/Dane139/cloud-resume-challenge\">GitHub Repository</a>.</p>"
+  },
+  {
+    "name": "Test3",
+    "handle": "test3'",
+    "thumbnail": "placeholder",
+    "description": "limpsum",
+    "body_html": "<h1>Cloud Resume Challenge</h1>\n<p>This is my very first cloud project! I built a complete serverless web application using <strong>AWS</strong> to host my resume online and track visitor counts.</p>\n<h2>The Tech Stack</h2>\n<ul>\n<li><strong>Frontend:</strong> Hosted on S3 and distributed globally with CloudFront.</li>\n<li><strong>Backend:</strong> A Python Lambda function triggered by API Gateway.</li>\n<li><strong>Database:</strong> DynamoDB to store the visitor count.</li>\n<li><strong>CI/CD:</strong> GitHub Actions for automated deployments.</li>\n</ul>\n<p>Check out the architecture and code on my <a href=\"https://github.com/Dane139/cloud-resume-challenge\">GitHub Repository</a>.</p>"
+  },
+  {
+    "name": "Test4",
+    "handle": "test4'",
+    "thumbnail": "placeholder",
+    "description": "limpsum",
+    "body_html": "<h1>Cloud Resume Challenge</h1>\n<p>This is my very first cloud project! I built a complete serverless web application using <strong>AWS</strong> to host my resume online and track visitor counts.</p>\n<h2>The Tech Stack</h2>\n<ul>\n<li><strong>Frontend:</strong> Hosted on S3 and distributed globally with CloudFront.</li>\n<li><strong>Backend:</strong> A Python Lambda function triggered by API Gateway.</li>\n<li><strong>Database:</strong> DynamoDB to store the visitor count.</li>\n<li><strong>CI/CD:</strong> GitHub Actions for automated deployments.</li>\n</ul>\n<p>Check out the architecture and code on my <a href=\"https://github.com/Dane139/cloud-resume-challenge\">GitHub Repository</a>.</p>"
+  },
+  {
+    "name": "Test5",
+    "handle": "test5'",
+    "thumbnail": "placeholder",
+    "description": "limpsum",
+    "body_html": "<h1>Cloud Resume Challenge</h1>\n<p>This is my very first cloud project! I built a complete serverless web application using <strong>AWS</strong> to host my resume online and track visitor counts.</p>\n<h2>The Tech Stack</h2>\n<ul>\n<li><strong>Frontend:</strong> Hosted on S3 and distributed globally with CloudFront.</li>\n<li><strong>Backend:</strong> A Python Lambda function triggered by API Gateway.</li>\n<li><strong>Database:</strong> DynamoDB to store the visitor count.</li>\n<li><strong>CI/CD:</strong> GitHub Actions for automated deployments.</li>\n</ul>\n<p>Check out the architecture and code on my <a href=\"https://github.com/Dane139/cloud-resume-challenge\">GitHub Repository</a>.</p>"
+  }
+]

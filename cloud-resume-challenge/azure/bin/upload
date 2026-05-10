@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+set -e
+
+echo "Uploading latest website build to Azure..."
+ansible-playbook playbooks/upload.yml

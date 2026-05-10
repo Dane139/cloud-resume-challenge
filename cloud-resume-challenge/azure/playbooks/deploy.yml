@@ -1,0 +1,22 @@
+---
+- name: Deploy Azure Infrastructure
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  tasks:
+    - name: Initialize Terraform Engine
+      ansible.builtin.command: terraform init
+      args:
+        chdir: "{{ playbook_dir }}/../../terraform"
+
+    - name: Deploy Infrastructure via Terraform
+      ansible.builtin.command: terraform apply -auto-approve
+      args:
+        chdir: "{{ playbook_dir }}/../../terraform"
+      register: tf_output
+      changed_when: "'Resources: 0 added, 0 changed, 0 destroyed' not in tf_output.stdout"
+
+    - name: Infrastructure Deployment Complete
+      ansible.builtin.debug:
+        msg: "Terraform successfully synchronized your Azure environment!"

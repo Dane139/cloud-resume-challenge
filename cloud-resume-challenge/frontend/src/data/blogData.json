@@ -1,0 +1,21 @@
+[
+  {
+    "name": "Building the Foundation: My Azure Roadmap",
+    "handle": "my-journey-to-the-cloud",
+    "date": "2026-05-07",
+    "body_html": "<h2>More Than Just a Cloud Resume</h2>\n<p>My journey isn&#39;t just about finishing a challenge; it&#39;s about mastering the stack. I’ve shifted my focus from just &quot;making it work&quot; to &quot;making it secure and scalable.&quot;</p>\n<h3>Current Milestones:</h3>\n<ul>\n<li><strong>Infrastructure as Code:</strong> Moving away from the Azure Portal and strictly using <strong>Terraform</strong>.</li>\n<li><strong>Identity Management:</strong> Hardening <strong>Entra ID</strong> (Azure AD) and enforcing MFA.</li>\n<li><strong>Observability:</strong> Visualizing threat telemetry with <strong>Splunk</strong>.</li>\n</ul>\n<p>The &quot;Cloud Resume Challenge&quot; was the catalyst, but the journey to becoming a Senior Architect starts with these small, automated steps.</p>\n"
+  },
+  {
+    "name": "The Spark: From Blue Collar to Cloud",
+    "handle": "the-origin-story",
+    "date": "2026-05-01",
+    "body_html": "<h2>Why I Left the Trades for the Terminal</h2>\n<p>For years, my world was measured in physical labor and tangible results. Working in the trades taught me the value of a &quot;hard day&#39;s work&quot; and the absolute necessity of getting a job done right the first time—because in the physical world, a mistake can be costly.</p>\n<p>But I always had a tinkering spirit. Whether it was taking apart old PCs or gaming, the logic of systems always called to me. </p>\n<h3>The Transition</h3>\n<p>I realized that the same &quot;troubleshooting&quot; mindset I used in the trades applied perfectly to infrastructure. Instead of fixing a physical leak, I’m now fixing a data leak. Instead of building a physical foundation, I’m deploying a <strong>Terraform</strong> template to build a digital one.</p>\n<h3>Why Cloud?</h3>\n<p>The scale is what hooked me. The idea that I can write a few lines of code and spin up an entire global environment in <strong>Azure</strong> is, frankly, like magic. This blog will be my journal as I navigate WGU, certifications, and the ever-evolving world of Cloud Architecture.</p>\n"
+  },
+  {
+    "name": "daneondemand.com is live",
+    "handle": "hello-world",
+    "date": "2026-01-04",
+    "excerpt": "The first handshake between this code and the open internet.",
+    "body_html": "<h2>The First Commit</h2>\n<p>Today marks the day the first version of <strong>daneondemand.com</strong> officially went live. It’s simple, it’s raw, and there is a massive list of features currently sitting in the backlog.</p>\n<p>This site is more than just a resume, it’s a live lab for my journey into Cloud Engineering. I’m starting with the basics of <strong>React</strong> and <strong>Azure Static Web Apps</strong>, but the plan is to scale this into a full-stack showcase of automation and security.</p>\n<p>Stay tuned for more posts.</p>\n"
+  }
+]

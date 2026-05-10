@@ -1,0 +1,15 @@
+---
+- name: Deploy Frontend CDN Infrastructure
+  hosts: localhost
+  connection: local
+  vars:
+    resource_group: "cloud-resume-challenge"
+    location: "eastus2"
+    cdn_name: "danecloudresumeweb"
+  tasks:
+    - name: Run Azure CLI to deploy CDN Bicep template
+      command: >
+        az deployment group create
+        --resource-group {{ resource_group }}
+        --template-file ../cdn.bicep
+        --parameters location={{ location }} staticWebAppName={{ cdn_name }}

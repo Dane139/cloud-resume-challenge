@@ -1,0 +1,15 @@
+---
+- name: Deploy Storage Infrastructure
+  hosts: localhost
+  connection: local
+  vars:
+    resource_group: "cloud-resume-challenge"
+    location: "eastus2"
+    storage_name: "resumestor{{ 100000 | random(start=10000) }}"
+  tasks:
+    - name: Run Azure CLI to deploy Storage Bicep template
+      command: >
+        az deployment group create
+        --resource-group {{ resource_group }}
+        --template-file ../storage.bicep
+        --parameters location={{ location }} storageAccountName={{ storage_name }}

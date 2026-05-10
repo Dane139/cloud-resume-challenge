@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+set -e
+
+echo "Starting Storage deployment via Ansible..."
+ansible-playbook playbooks/deploy-storage.yml

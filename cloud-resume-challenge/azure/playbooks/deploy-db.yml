@@ -1,0 +1,15 @@
+---
+- name: Deploy Cosmos DB Infrastructure
+  hosts: localhost
+  connection: local
+  vars:
+    resource_group: "cloud-resume-challenge"
+    location: "eastus2"
+    cosmos_name: "resumedb{{ 100000 | random(start=10000) }}"
+  tasks:
+    - name: Run Azure CLI to deploy Bicep template
+      command: >
+        az deployment group create
+        --resource-group {{ resource_group }}
+        --template-file ../db.bicep
+        --parameters location={{ location }} cosmosAccountName={{ cosmos_name }}

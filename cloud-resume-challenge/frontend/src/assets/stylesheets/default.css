@@ -1,0 +1,158 @@
+@import './breakpoints.css';
+
+* { box-sizing: border-box; font-family: Verdana, Geneva, Tahoma, sans-serif; }
+
+html, body {
+    height: 100%; width: 100%; margin: 0; padding: 0;
+    background: #ECEEF0 url('/src/assets/images/textured-mulberry-paper.webp');
+    background-size: 50%;
+}
+
+h1, h2, h3, h4, h5 { margin: 0; border: none !important; }
+p { margin: 0; }
+
+main { height: 100%; width: 100%; display: flex; flex-direction: column; overflow: hidden; }
+
+header { background: #000; flex-shrink: 0; }
+header nav.main-nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 24px; padding: 16px; }
+header nav.main-nav a {
+    color: rgb(200, 200, 200); text-decoration: none; font-size: 1.1rem; 
+    font-weight: 500; padding: 8px 16px; border-radius: 4px; transition: all 0.2s;
+}
+header nav.main-nav a:hover { background-color: rgb(51, 51, 51); color: #fff; }
+header nav.main-nav a.active { color: #0078d4; font-weight: bold; background: rgba(0, 120, 212, 0.1); }
+
+h1.page_header, .post-view-title {
+    font-weight: 900; 
+    text-transform: uppercase; 
+    text-align: center; 
+    background: linear-gradient(45deg, #101111 0%, #2e094c 15%, #0a1c3b 30%, #00a2f9 45%, #eef2f7 55%, #ef4444 70%, #f9a83a 85%, #101111 100%);
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    background-clip: text;
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.4); 
+    filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.3));
+}
+
+h1.page_header { font-size: 3.5rem; margin: 40px 0 24px 0; }
+.post-view-title { font-size: 2.8rem !important; line-height: 1.2; margin-bottom: 12px !important; }
+
+article, .hero-card, .post-item-card, .single-post-card {
+    background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(10px);            
+    padding: 40px; margin: 0 auto 30px auto; width: 90%; max-width: 1000px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-radius: 16px; 
+    display: flex; flex-direction: column; gap: 16px; overflow: hidden;
+    align-items: center; 
+}
+
+.about-profiles {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 60px;
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    width: 100%;
+}
+
+.profile-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.profile-role {
+    font-size: 0.9rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #333;
+    text-align: center;
+}
+
+.profile-role.morale-blue {
+    color: #0078d4; 
+}
+
+.profile-image-container { 
+    width: 200px; height: 200px; border-radius: 50%; overflow: hidden; 
+    border: 4px solid #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.15); 
+    margin: 0 auto 10px auto; flex-shrink: 0;
+}
+.profile-image { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.featured-skills-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.badge {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #444;
+    text-transform: uppercase;
+}
+
+.cta-container { 
+    display: flex; 
+    flex-direction: row; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 16px; 
+    margin-top: 20px; 
+    width: 100%;
+}
+
+.btn-solid, .btn-explore, .btn-back { 
+    padding: 12px 24px; border-radius: 999px; text-decoration: none !important; font-weight: 600; 
+    transition: all 0.2s; display: inline-flex; justify-content: center; align-items: center;
+    white-space: nowrap; flex: 0 1 auto;
+}
+
+.btn-solid { background: #000; color: #fff !important; }
+.btn-solid:hover { background: #333; transform: translateY(-1px); }
+
+.btn-explore { background: #0078d4; color: #fff !important; }
+.btn-explore:hover { background: #005a9e; transform: translateY(-1px); }
+
+.post-item-card .btn-explore { width: 100%; flex: 1; }
+.btn-back { background: #000; color: #fff !important; margin-bottom: 24px; align-self: flex-start; }
+
+.section-title {
+    display: block; text-align: center; width: 100%; margin: 40px 0 20px 0;
+    text-transform: uppercase; letter-spacing: 2px; font-size: 1.1rem; color: #333; font-weight: 800;
+}
+
+.post-view-header { text-align: center; margin-bottom: 40px; background: transparent; width: 100%; }
+.post-date-sub { color: #0078d4; font-weight: 700; font-size: 1rem; text-transform: uppercase; text-align: center; display: block; }
+
+div.content_wrap { height: 100%; width: 100%; overflow: auto; padding: 16px; }
+.markdown { line-height: 1.8; color: #111; padding: 0 16px; font-size: 1.1rem; text-align: left; width: 100%; }
+.markdown p { margin-bottom: 24px; }
+.markdown h2, .markdown h3 { 
+    margin-top: 30px; margin-bottom: 15px; font-weight: 700; color: #111; 
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05) !important; padding-bottom: 8px; 
+}
+
+@media (max-width: 600px) {
+    h1.page_header { font-size: 2.2rem; }
+    .post-view-title { font-size: 2rem !important; }
+    .cta-container { flex-direction: column; width: 100%; }
+    .btn-solid, .btn-explore { width: 100%; flex: 1; }
+    .featured-skills-badges { flex-direction: column; align-items: center; }
+    
+    .about-profiles {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+}

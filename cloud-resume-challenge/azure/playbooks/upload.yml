@@ -1,0 +1,33 @@
+---
+- name: Upload Website to Azure Static Web Apps
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  tasks:
+    - name: Get ASWA Deployment Token
+      ansible.builtin.command: >
+        az staticwebapp secrets list 
+        --name danecloudresumeweb 
+        --resource-group cloud-resume-challenge 
+        --query "properties.apiKey" 
+        --output tsv
+      register: swa_token
+      changed_when: false
+      
+    - name: Ensure config file is in the build directory
+      ansible.builtin.copy:
+      src: "./frontend/public/staticwebapp.config.json"
+      dest: "./frontend/dist/staticwebapp.config.json"
+      
+    - name: Deploy React Build using SWA CLI
+      ansible.builtin.command: >
+        swa deploy ../../frontend/dist 
+        --app-name danecloudresumeweb 
+        --env production 
+        --deployment-token {{ swa_token.stdout }}
+      changed_when: true
+
+    - name: Upload Complete
+      ansible.builtin.debug:
+        msg: "Your ASWA deployment is live!"
