@@ -1,7 +1,7 @@
 ---
 name: "The Launch: Daneondemand.com Is Live"
 handle: "daneondemand-is-live"
-date: '2026-05-10'
+date: '2026-05-09'
 ---
 
 # The First Handshake: Hello, World.

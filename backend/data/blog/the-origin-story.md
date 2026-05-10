@@ -1,7 +1,7 @@
 ---
 name: "Blue Collar Logic: Why I Sign My Code"
 handle: "the-origin-story"
-date: '2026-05-01'
+date: '2026-04-30'
 ---
 
 # From the Pavement to the Cloud

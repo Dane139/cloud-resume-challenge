@@ -1,7 +1,7 @@
 ---
 name: "The Long Game: My Azure Roadmap"
 handle: "my-journey-to-the-cloud"
-date: '2026-05-07'
+date: '2026-05-06'
 ---
 
 # More Than Just a Cloud Resume
