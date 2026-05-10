@@ -1,7 +1,7 @@
 ---
 name: "The Long Game: My Azure Roadmap"
 handle: "my-journey-to-the-cloud"
-date: '2026-05-06'
+date: '2026-05-07T00:00:00-04:00'
 ---
 
 # More Than Just a Cloud Resume
@@ -17,8 +17,8 @@ On **January 3rd, 2026**, I finally saw that "PASS" on the screen. It wasn't jus
 Moving from Wisconsin to Florida while extending my contract at Baird was a whirlwind, but it solidified my focus. I’m no longer content just closing end-user tickets. I’ve built the foundation, and now I’m looking to manage the skyscraper.
 
 ### Current Milestones:
-* **Infrastructure as Code:** Strictly using **Terraform** to ensure my labs are repeatable and documented. No more "Click-Ops."
-* **Observability:** Integrating **Splunk** and **Nessus** because a cloud environment you can't monitor is just a disaster waiting to happen.
+* **Infrastructure as Code:** Strictly using Terraform to ensure my labs are repeatable and documented. No more "Click-Ops."
+* **Observability:** Integrating Splunk and Nessus because a cloud environment you can't monitor is just a disaster waiting to happen.
 * **Proactive Engineering:** Shifting from "Fixing what broke" to "Building so it doesn't break."
 
 The "Cloud Resume Challenge" was the catalyst, but the journey to becoming a Senior Architect is built on these small, automated steps. I’m healthy, I’m consistent, and I’m ready for the next jump.

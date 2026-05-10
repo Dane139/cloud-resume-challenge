@@ -1,7 +1,7 @@
 ---
 name: "Blue Collar Logic: Why I Sign My Code"
 handle: "the-origin-story"
-date: '2026-04-30'
+date: '2026-05-01T00:00:00-04:00'
 ---
 
 # From the Pavement to the Cloud
@@ -19,4 +19,4 @@ But I found myself bored with just analyzing. I wanted to build
 ### Why Cloud Architecture?
 I can't pinpoint the exact moment I chose Cloud, but I remember the feeling of the Cloud Resume Challenge. It was the first time a technical project made me feel the same way a hard day in the trades did. It was difficult, it required a foundation, and if you messed up the networking, the whole thing collapsed. 
 
-I've trading my shovel for a mopuse & keyboard, but the mindset is the same: **Do it right the first time.**
+I've trading my shovel for a mopuse & keyboard, but the mindset is the same: Do it right the first time.
