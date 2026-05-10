@@ -28,60 +28,56 @@ export default function AboutPage() {
           <h2>Hi, I'm Dane Willms.</h2>
 
           <p>
-            I am a Junior Cloud Engineer based in Brandon, FL, with a deep passion for building scalable,
-            automated, and secure infrastructure. I don't just write code; I approach infrastructure with 
-            the same grit and practical problem-solving mindset I learned working in the trades.
+            I am a Junior Cloud Engineer based in Brandon, FL. I don't just write code; I approach infrastructure with 
+            the same grit and practical problem-solving mindset I learned working in the Wisconsin trades.
           </p>
 
-          <h3>My Story: From Blue Collar to Tech</h3>
+          <h3>The Foundation: From Pavement to Architecture</h3>
           <p>
-            I was born and raised in Wisconsin, surrounded by a family of hardworking, blue-collar professionals. 
-            For a long time, that was my world too. I spent years working in trades where you learn the value of 
-            a hard day's work and the importance of getting the job done right the first time.
+            I was raised by a family of blue-collar professionals, my father was a mason who went above & beyond his typicaly work 
+            building inground pools on the side, and my uncle was a lead foreman on an asphalt crew. My first real job
+            was sweeping parking lots, crack filling, and sealing driveways. I worked 7 days a week, 12+ hours a day.
+            That environment instilled a permanent rule in me: <strong> If you're not willing to sign your name to your work, 
+            you're not doing it right.</strong>
           </p>
           <p>
-            But my tech side has always been there. It started when my family got our first home computer when 
-            I was eight years old. Whether I was gaming or taking apart PCs to see what made them tick, I never 
-            stopped tinkering. After spending years in blue-collar roles, I realized I couldn't ignore that 
-            childhood curiosity any longer. I reached a turning point, and I decided to pivot into IT which
-            has now led me to where I am today in looking to build a career in cloud engineering.
+            I spent years exploring different paths, logistics, transportation, and even considered physical therapy or an NP 
+            because I've always been fascinated by pharmacology and human biology. I spent a few years CNC machining, 
+            working 12-hour shifts through COVID on government contracts. But I reached a point where the "grind" 
+            needed a new direction. 
           </p>
 
-          <h3>My Path to the Cloud</h3>
+          <h3>The Pivot: Breaking into Tech</h3>
           <p>
-            My transition was a hands-on journey. I started in help desk, dealing with everything from complex 
-            network issues to the "dreaded" office printers. While that environment was challenging, it was also 
-            where I found my spark. I became obsessed with security, spending my off-hours digging into 
-            phishing analysis, threat hunting, and certifications.
+            After a life-changing loss and a realization that I wanted more, I tried college for Cybersecurity but 
+            dropped out after one semester due to life circumstances. However, that was enough to land my first 
+            Help Desk role. I finally found a field that rewarded my tinkering spirit. I dove into everything. TryHackMe, 
+            HackTheBox, and Blue Team Level 1. I even started inspecting phishing emails and managing our KnowBe4 platform 
+            at my first job.
           </p>
           <p>
-            I briefly explored GRC (Governance, Risk, and Compliance), but I learned quickly that nothing 
-            beats the satisfaction of solving technical problems. I missed the build. 
-            That’s when I pivoted toward Azure. My daily tasks involved more cloud administration, and I found 
-            myself naturally gravitating toward the architecture side of things. 
-          </p>
-          <p>
-            After stumbling across the Cloud Resume Challenge, I was hooked. Seeing entire 
-            environments spun up from scratch and fully automated changed my perspective on what engineering 
-            could be. That excitement is what led me to WGU to pursue my B.S. in Cloud and Network Engineering.
+            I eventually stumbled upon the Cloud Resume Challenge and struggled immensely. I followed guides by 
+            MadeByGPS, picked up Python and Linux books, and started the AZ-104 grind. It wasn't easy, I failed the 
+            AZ-104 twice with scores of 659 and 646. But coming from the trades, I don't know how to quit. I finally 
+            passed on January 3rd, 2026.
           </p>
 
           <h3>What I Focus On</h3>
           <ul>
-            <li><strong>Cloud Infrastructure:</strong> Designing, deploying, and managing robust environments in Microsoft Azure.</li>
-            <li><strong>Automation & IaC:</strong> Utilizing Terraform and PowerShell to eliminate routine administrative overhead.</li>
-            <li><strong>Security & Identity:</strong> Hardening Entra ID (Azure AD), enforcing strict MFA access, and visualizing threat telemetry.</li>
+            <li><strong>Cloud Infrastructure:</strong> Designing and automating robust environments in Microsoft Azure.</li>
+            <li><strong>Automation & IaC:</strong> Moving away from "Click-Ops" and using Terraform to ensure every deployment is repeatable.</li>
+            <li><strong>Proactive Observability:</strong> Using Splunk and Nessus to monitor threat telemetry instead of just reacting to end-user tickets.</li>
           </ul>
 
           <h3>Beyond the Terminal</h3>
           <p>
-            When I’m not at my computer, I try to keep a balance between the screen and the real world. I’m an avid lifter and love spending time in the kitchen cooking up great food.
-            You’ll also frequently find me hanging out with my girlfriend and our dachshund, who serves as the unofficial "Chief Morale Officer" of our home.
+            Recently, I moved from Wisconsin to Florida. While I miss the ice fishing and snowboarding, trading the 
+            winter for the sunshine has been a massive reset. When I'm not building in Azure, I'm in the gym or 
+            cooking healthy, home-cooked meals with my girlfriend. 
           </p>
           <p>
-            Since moving to Florida from Wisconsin, I’m still in the process of finding my hobbies. I’m a huge fan of snowboarding and ice fishing,
-            so trading those in for Florida sunshine has been quite an adjustment. I still try to get out on the golf course whenever I can, even if my game is still a work in progress
-            and I’m currently on the hunt for new outdoor activities to replace the hiking and winter sports I grew up with. 
+            Keeping the peace at home is our dachshund, the unofficial "Chief Morale Officer." I’m settled in, 
+            consistency is back at 100%, and I'm hungry to build more cloud infrastructure.
           </p>
         </div>
       </article>

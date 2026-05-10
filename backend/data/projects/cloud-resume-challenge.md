@@ -6,65 +6,81 @@ description: A full-stack serverless application featuring a unique visitor coun
 weight: 1
 ---
 
-# Project Details
+# Cloud Resume Challenge: The Azure Evolution
 
-This is my take on the Cloud Resume Challenge. It's a full-stack cloud project I built on the side to help bridge the gap between my day job in IT help desk and the cloud engineering roles I am aiming for.
+> **The Mission:** This isn't just a digital CV. It's a full-stack, serverless environment designed to prove one thing: that I’ve moved beyond the "password reset" ticket queue and into the world of automated, scalable cloud architecture.
 
-## 🚀 Tech Stack
-* **Cloud Provider:** Microsoft Azure
-* **Infrastructure as Code (IaC):** Azure Bicep
-* **CI/CD:** GitHub Actions, Bash
-* **Frontend:** React, Vite, CSS
-* **Hosting:** Azure Static Web Apps
-* **Backend:** Azure Functions (Python)
-* **Database:** Azure Cosmos DB
+---
 
-## 📁 Project Structure
-* **frontend/:** The React code for my resume site and visitor counter.
-* **api/backend-counter/:** The Python code for the backend API.
-* **azure/:** My Bicep templates and infrastructure deployment logic.
-* **.github/workflows:** The pipeline automation that handles my deployments.
+## 🗓️ The Journey: Wisconsin to Florida
+I kicked off this challenge in March 2025 while working at Baird. Shortly after, I started my Cloud & Networking Engineering (Azure) degree at WGU in July. This project became the sandbox where I turned classroom theory into production reality.
 
-## 🏗️ The CI/CD Setup
-I ended up moving from local Ansible scripts to a GitHub Actions pipeline, which was a massive quality-of-life upgrade. Instead of fighting with my local laptop environment, I now have a clean Linux runner that handles everything automatically:
-1. It builds the React app and compiles the Python backend simultaneously.
-2. It drops my routing config file into the exact right folder.
-3. It pushes the whole thing to Azure.
-It is just a much more reliable way to manage a live site than running scripts manually from my desk.
+By September, life accelerated. My girlfriend and I decided to make a major move, and we spent the weekend before Christmas 2025 driving our entire lives down to Florida. When the dust finally settled in early 2026, I returned to this project and realized "Past Dane" had left "Future Dane" some serious technical debt. 
 
-## 🚧 What Went Wrong (And How I Fixed It)
-This whole project was basically one long debugging session. Here are the biggest hurdles I hit:
+Azure had evolved, best practices had shifted, and my own standards had leveled up. I decided to tear it down and rebuild it with a focus on production-grade automation.
 
-* **The GitHub Actions "Lie" & The Nested Folder Trap:** Right at the finish line, my deployment pipeline showed a green success checkmark, but the API was completely broken.
-  <details>
-  <summary><i>View technical details...</i></summary>
-  <p>My React frontend was crashing with a weird HTML parsing error (<code>Unexpected token '<'</code>) instead of showing the visitor count. It turned out GitHub Actions was successfully deploying the frontend but quietly skipping the Python backend. VS Code visually collapsed my directories, so I didn't realize my Python files were sitting inside an extra subfolder (<code>api/backend-counter</code>). Azure looked in the top-level <code>api/</code> folder, didn't find a <code>requirements.txt</code>, shrugged, and skipped the build entirely without failing the pipeline. I had to dig into the raw Oryx build logs, spot the silent failure, and update my YAML file to point to the exact subfolder (<code>api_location: "api/backend-counter"</code>). It was a brutal lesson in reading the actual build logs instead of just trusting a green pipeline.</p>
-  </details>
+---
 
-* **Infrastructure Sequencing:** I ran into circular dependencies in my Bicep templates. The Function App and CosmosDB were basically stuck waiting on each other.
-  <details>
-  <summary><i>View technical details...</i></summary>
-  <p>The deployment would just hang and eventually time out. I had to learn how to map out my infrastructure properly and use the <code>dependsOn</code> property in Bicep to force Azure to deploy things in a very specific order: Infrastructure first, app settings second, and the actual code last.</p>
-  </details>
+## 🚀 The Engineering Stack
+* **The Cloud:** Microsoft Azure
+* **IaC:** Terraform (State management via Blob Storage)
+* **Backend:** Azure Functions (Python 3.11)
+* **Database:** Azure Cosmos DB (NoSQL)
+* **Frontend:** React 18 & Vite
+* **CI/CD:** GitHub Actions (Fully automated pipelines)
+* **Data Pipeline:** Node.js (Markdown-to-JSON automation)
 
-* **The CORS Rabbit Hole:** I spent hours rewriting my Python backend code when the real issue was just a security handshake failure.
-  <details>
-  <summary><i>View technical details...</i></summary>
-  <p>The browser was killing the connection before it even reached my API because my Azure Static Web App wasn't on the "Allowed Origins" list. It definitely taught me to check the browser's Network Tab first before assuming my code is broken. I eventually bypassed the CORS nightmare entirely by migrating to a Managed API architecture.</p>
-  </details>
+![Cloud resume challenge implementation](/assets/projects/cloud-resume-thumb.jpg)
 
-* **The Frontend/ViteJS Learning Curve:** Since I am much more comfortable on the backend and infrastructure side, learning React and Vite felt incredibly strict and unintuitive.
-  <details>
-  <summary><i>View technical details...</i></summary>
-  <p>React is super unforgiving. If your JSX isn't absolutely perfect, the whole build breaks. Vite treats every single character as critical, so missing a closing tag or a curly brace leads to an immediate build failure. It was brutal, but it forced me to actually learn how modern frontend build tools work.</p>
-  </details>
+---
 
-* **CSS and Layout Refactoring:** I struggled a lot with getting consistent grid layouts and thumbnail alignment across different screen sizes.
-  <details>
-  <summary><i>View technical details...</i></summary>
-  <p>I spent days fighting with CSS box-model spacing and thumbnail aspect ratios. I eventually got the hang of Flexbox and Grid layouts to make sure the project gallery cards actually looked good whether you are on a phone or a desktop monitor. It was a harsh lesson in the difference between <i>'it looks fine on my screen'</i> and <i>'it looks fine on every screen.'</i></p>
-  </details>
+## 🏗️ Architectural Decision Records (The "Why")
+In a production environment, the *reasoning* behind the tech is as important as the code itself.
 
-  ---
+### 1. Swapping Bicep for Terraform
+Bicep is excellent for Microsoft pure shops, but I wanted a Cloud Agnostic mindset. I migrated the entire environment to Terraform to master state management and resource lifecycle hooks that translate across providers. This serves as the foundation for my upcoming Terraform Associate certification.
 
-Check out the full implementation and security documentation on my [GitHub Repository](https://github.com/Dane139/cloud-resume-challenge).
+### 2. From Ansible to GitHub Actions
+Originally, I used local Ansible playbooks. It worked, but it was "Snowflake Infrastructure" if my computer died, the deployment path died with it. I moved the logic to GitHub Actions to create a declarative, hands-off pipeline. Now, the code is the only source of truth.
+
+### 3. Engineering a Custom Content Pipeline
+I reached a point where manual JSON management was a bottleneck. I engineered a Node.js synchronization script that watches my Markdown folders. When I push a new post, the script parses metadata and builds the JSON artifacts automatically. This Content-as-Code approach keeps the UI and Data strictly decoupled.
+
+---
+
+## 🚧 Post-Mortems: What Went Wrong
+This project was a series of brick walls that I had to "headbutt" my way through. Nights with less sleep, reverted changes, and the classic "one last fix" that took four hours:
+
+* **The "Double-Count" Race Condition**
+    > **The Issue:** React 18’s Strict Mode mounts components twice in development. This caused my visitor counter to jump by +2 on every refresh. The visitor counter was the bane of my existence back in 2025, and it remained a challenge a year later.
+    >
+    > **The Fix:** I went through three rounds of hardening: starting with `useRef` locks, moving to `localStorage` optimistic stamping, and finally refactoring the API to a strict GET vs POST contract. Now, the backend only increments when a unique session is validated.
+* **The "NoneType" Connection String Crash**
+    > **The Issue:** A critical `AttributeError` during local testing. It turned out the Python runtime was failing to find the Cosmos DB connection string due to a silent injection failure.
+    >
+    > **The Fix:** I reconstructed the local `.venv` from scratch and overhauled `local.settings.json` to ensure the Azure Functions Core Tools injected the variables correctly.
+* **The GitHub Actions "Silent Fail"**
+    > **The Issue:** Green checkmarks on the pipeline, but 404s on the API. 
+    >
+    > **The Fix:** I stopped trusting the success badge and dived into the raw Oryx build logs. I found a "No buildable projects found" warning caused by a nested sub-folder, updated the YAML pathing, and the API finally came to life.
+
+---
+
+## 🚀 Production-Grade Roadmap
+If I were handing this over to a 24/7 enterprise environment tomorrow, here is the roadmap:
+
+1.  **Secret Governance:** Move all connection strings out of GitHub Secrets and into Azure Key Vault with Managed Identity. Zero-secret exposure is the standard.
+2.  **Observability:** Integrate Azure Application Insights. I want real-time telemetry on Function App "Cold Starts" and Kusto (KQL) alerts to monitor DB throughput.
+3.  **Global Scale:** Transition Cosmos DB to a Multi-Region write setup to provide low-latency experiences for global users.
+
+---
+
+## 🙌 Mentors & Influence
+* **Forrest Brazeal:** For the original blueprint that set me on this cloud path.
+* **Jhante Charles:** For being the voice in my head telling me to focus on high-value projects. His guidance on my AD, Splunk, and Nessus labs is the reason my portfolio has "meat" on its bones.
+* **MadeByGPS & Andrew Brown:** For the frontend blueprints and serverless deep-dives that kept me sane when the code wouldn't compile.
+
+---
+
+
+**[View the full implementation and technical post-mortem on GitHub](https://github.com/Dane139/cloud-resume-challenge)**

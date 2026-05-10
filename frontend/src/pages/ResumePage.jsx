@@ -1,6 +1,6 @@
 import React from "react";
 import "../assets/stylesheets/pages/resume.css"; 
-import { Mail, MapPin, Phone, ExternalLink, Award } from 'lucide-react';
+import { Mail, MapPin, ExternalLink, Award, Globe } from 'lucide-react';
 
 export default function ResumePage() {
   return (
@@ -15,23 +15,84 @@ export default function ResumePage() {
             <div className="resume-contact">
               <span><MapPin size={16} /> Brandon, FL</span>
               <span>•</span>
-              <span><Mail size={16} /> dane.willms1@gmail.com</span>
+              <span><Mail size={16} /> hello@daneondemand.com</span>
               <span>•</span>
-              <span><Phone size={16} /> 414-210-7636</span>
+              <span><Globe size={16} /> <a href="https://daneondemand.com" target="_blank" rel="noreferrer">daneondemand.com</a></span>
             </div>
           </header>
 
           <section className="resume-section">
-            <h2>Education</h2>
+            <h2>Professional Experience</h2>
+            
             <div className="entry">
               <div className="entry-header">
-                <span className="entry-title">Western Governor's University</span>
-                <span className="entry-meta">Millcreek, UT</span>
+                <span className="entry-title">DART Tech</span>
+                <span className="entry-meta">Mar '26 - Present</span>
               </div>
+              <span className="entry-org">IT Support Services | Tampa, FL</span>
+              <ul className="resume-list">
+                <li><strong>Task:</strong> Automated identity lifecycle management and tenant administration. <strong>Tool:</strong> PowerShell & Microsoft Graph API. <strong>Impact:</strong> Streamlined user provisioning and attribute modifications in Entra ID, significantly reducing manual ticket processing time.</li>
+                <li><strong>Task:</strong> Orchestrated cloud mailbox operations. <strong>Tool:</strong> Exchange Online PowerShell. <strong>Impact:</strong> Efficiently managed multi-tenant mailbox permissions and configurations with zero-error CLI execution.</li>
+                <li><strong>Task:</strong> Optimized virtual desktop resource scaling and performance. <strong>Tool:</strong> Azure Virtual Desktop (AVD) & Nerdio. <strong>Impact:</strong> Maintained high-availability host pools and ensured consistent session performance for enterprise clients.</li>
+              </ul>
+            </div>
+
+            <div className="entry">
               <div className="entry-header">
-                <span className="entry-org">B.S. Cloud and Network Engineering (Azure Track)</span>
-                <span className="entry-meta">Exp. Dec 2026</span>
+                <span className="entry-title">RW Baird</span>
+                <span className="entry-meta">Mar '25 - Mar '26</span>
               </div>
+              <span className="entry-org">IT Service Desk Technician | Milwaukee, WI</span>
+              <ul className="resume-list">
+                <li><strong>Task:</strong> Resolved Zscaler Private Access (ZPA) client-side connectivity issues. <strong>Tool:</strong> ZPA, Bomgar, & VNC Viewer. <strong>Impact:</strong> Restored secure remote access by repairing services and forced-refreshing user policies, ensuring adherence to Zero Trust architecture.</li>
+                <li><strong>Task:</strong> Conducted Active Directory security group audits upon stakeholder request. <strong>Tool:</strong> PowerShell. <strong>Impact:</strong> Provided precise membership telemetry, enabling departments to accurately update and manage their identity access lists.</li>
+                <li><strong>Task:</strong> Authored high-fidelity technical documentation and RCA reports. <strong>Tool:</strong> Knowledge Base (KB). <strong>Impact:</strong> Established a standardized troubleshooting benchmark used for team-wide training and improving first-call resolution rates.</li>
+              </ul>
+            </div>
+          </section>
+
+          <section className="resume-section">
+            <h2>Cloud Engineering Projects</h2>
+            
+            <div className="entry">
+              <div className="entry-header">
+                <span className="entry-title">Multi-Site Cloud SIEM</span>
+                <span className="entry-meta">Azure | Splunk | Terraform</span>
+              </div>
+              <ul className="resume-list">
+                <li><strong>Task:</strong> Automated the infrastructure provisioning of a Splunk Enterprise indexer. <strong>Tool:</strong> Terraform. <strong>Impact:</strong> Established a scalable, declarative Infrastructure-as-Code (IaC) foundation, replacing manual "click-ops" deployments.</li>
+                <li><strong>Task:</strong> Engineered custom security monitoring dashboards. <strong>Tool:</strong> Splunk Processing Language (SPL). <strong>Impact:</strong> Visualized brute-force telemetry to accelerate threat detection and incident response times.</li>
+              </ul>
+            </div>
+
+            <div className="entry">
+              <div className="entry-header">
+                <span className="entry-title">Automated Identity Infrastructure</span>
+                <span className="entry-meta">Azure | Terraform | Active Directory</span>
+              </div>
+              <ul className="resume-list">
+                <li><strong>Task:</strong> Architected a Windows Server 2025 Domain Controller in Azure. <strong>Tool:</strong> Terraform. <strong>Impact:</strong> Replaced manual "click-ops" with version-controlled IaC, establishing a hardened and repeatable cloud identity footprint.</li>
+              </ul>
+            </div>
+
+            <div className="entry">
+              <div className="entry-header">
+                <span className="entry-title">Automated Vulnerability Management</span>
+                <span className="entry-meta">Azure | Nessus | PowerShell</span>
+              </div>
+              <ul className="resume-list">
+                <li><strong>Task:</strong> Deployed and configured a Tenable Nessus vulnerability scanner into Azure. <strong>Tool:</strong> IaC & PowerShell. <strong>Impact:</strong> Executed credentialed scans and leveraged automation for rapid remediation of high-severity vulnerabilities, reducing the organizational attack surface.</li>
+              </ul>
+            </div>
+
+            <div className="entry">
+              <div className="entry-header">
+                <span className="entry-title">Azure Cloud Resume Challenge</span>
+                <span className="entry-meta">Azure | GitHub Actions | DNS</span>
+              </div>
+              <ul className="resume-list">
+                <li><strong>Task:</strong> Architected a globally available serverless static resume website. <strong>Tool:</strong> Azure Functions, Cosmos DB, & Blob Storage. <strong>Impact:</strong> 100% automated deployment via CI/CD pipelines, ensuring rapid updates and content delivery.</li>
+              </ul>
             </div>
           </section>
 
@@ -51,98 +112,13 @@ export default function ResumePage() {
           </section>
 
           <section className="resume-section">
-            <h2>Professional Experience</h2>
-            
+            <h2>Education</h2>
             <div className="entry">
               <div className="entry-header">
-                <span className="entry-title">DART Tech</span>
-                <span className="entry-meta">Mar '26 - Present</span>
+                <span className="entry-title">Western Governor's University</span>
+                <span className="entry-meta">Exp. Dec 2026</span>
               </div>
-              <span className="entry-org">IT Support Services | Tampa, FL</span>
-              <ul className="resume-list">
-                <li>Administered and optimized Azure Virtual Desktop (AVD) host pools utilizing Nerdio Manager, improving compute resource allocation and ensuring high availability for enterprise virtual sessions.</li>
-                <li>Remediated complex virtual desktop escalations utilizing FSLogix and Azure Storage Explorer, rapidly resolving hung profiles and file handle conflicts to minimize end-user downtime.</li>
-                <li>Governed enterprise identity lifecycles utilizing Microsoft Entra ID, configuring B2B guest provisioning and enforcing MFA policies to maintain strict conditional access compliance.</li>
-              </ul>
-            </div>
-
-            <div className="entry">
-              <div className="entry-header">
-                <span className="entry-title">RW Baird</span>
-                <span className="entry-meta">Mar '25 - Mar '26</span>
-              </div>
-              <span className="entry-org">IT Service Desk Technician | Milwaukee, WI</span>
-              <ul className="resume-list">
-                <li>Troubleshot secure web gateway routing and authentication disruptions utilizing Zscaler and CLI diagnostics, rapidly restoring network connectivity and secure access.</li>
-                <li>Automated repetitive security auditing workflows utilizing PowerShell scripting, eliminating manual data gathering and significantly reducing administrative overhead.</li>
-                <li>Authored high-fidelity Root Cause Analysis (RCA) reports, establishing a benchmark for technical troubleshooting narratives used in team-wide training.</li>
-              </ul>
-            </div>
-          </section>
-
-          <section className="resume-section">
-            <h2>Cloud Engineering Projects</h2>
-            
-            <div className="entry">
-              <div className="entry-header">
-                <span className="entry-title">Multi-Site Cloud SIEM</span>
-                <span className="entry-meta">Azure | Splunk | Terraform</span>
-              </div>
-              <ul className="resume-list">
-                <li>Automated the infrastructure provisioning of a Splunk Enterprise indexer in Azure utilizing Terraform, establishing a scalable, declarative Infrastructure-as-Code (IaC) foundation.</li>
-                <li>Engineered custom security monitoring dashboards utilizing Splunk Processing Language (SPL), visualizing brute-force telemetry to accelerate threat detection and incident response times.</li>
-              </ul>
-            </div>
-
-            <div className="entry">
-              <div className="entry-header">
-                <span className="entry-title">Automated Identity Infrastructure</span>
-                <span className="entry-meta">Azure | Terraform | Active Directory</span>
-              </div>
-              <ul className="resume-list">
-                <li>Architected a Windows Server 2025 Domain Controller in Azure using Terraform, completely replacing manual "click-ops" with automated, version-controlled IaC deployment.</li>
-                <li>Provisioned secure virtual networking components including VNets, Subnets, and NSGs to establish a hardened cloud identity footprint.</li>
-              </ul>
-            </div>
-
-            <div className="entry">
-              <div className="entry-header">
-                <span className="entry-title">Automated Vulnerability Management</span>
-                <span className="entry-meta">Azure | Nessus | PowerShell</span>
-              </div>
-              <ul className="resume-list">
-                <li>Deployed a Tenable Nessus vulnerability scanner into Azure utilizing Infrastructure-as-Code (IaC), establishing an automated security assessment baseline for cloud-hosted assets.</li>
-                <li>Executed credentialed vulnerability scans and leveraged PowerShell for rapid remediation of high-severity vulnerabilities (CVSS 8.8), effectively reducing the organizational attack surface.</li>
-              </ul>
-            </div>
-
-            <div className="entry">
-              <div className="entry-header">
-                <span className="entry-title">Azure Cloud Resume Challenge</span>
-                <span className="entry-meta">Azure | GitHub Actions | DNS</span>
-              </div>
-              <ul className="resume-list">
-                <li>Architected a highly available, serverless static resume website hosted on Azure Blob Storage with custom DNS routing.</li>
-                <li>Integrated CI/CD workflows via GitHub Actions to automate site deployments and content updates.</li>
-              </ul>
-            </div>
-          </section>
-
-          <section className="resume-section">
-            <h2>Technical Skills</h2>
-            <div className="skills-grid">
-              <div className="skill-category">
-                  <h3>Cloud & IaC</h3>
-                  <ul className="resume-list">
-                      <li>Microsoft Azure, Terraform, Azure Virtual Desktop (AVD), Entra ID, Nerdio Manager</li>
-                  </ul>
-              </div>
-              <div className="skill-category">
-                  <h3>Security & Networking</h3>
-                  <ul className="resume-list">
-                      <li>Splunk (SIEM), Tenable Nessus, Zscaler, IAM, TCP/IP, DNS, NSG Configuration</li>
-                  </ul>
-              </div>
+              <span className="entry-org">B.S. Cloud and Network Engineering (Azure Track)</span>
             </div>
           </section>
 

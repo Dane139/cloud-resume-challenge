@@ -1,17 +1,22 @@
 ---
-name: "The Spark: From Blue Collar to Cloud"
+name: "Blue Collar Logic: Why I Sign My Code"
 handle: "the-origin-story"
 date: '2026-05-01'
 ---
 
-## Why I Left the Trades for the Terminal
+# From the Pavement to the Cloud
 
-For years, my world was measured in physical labor and tangible results. Working in the trades taught me the value of a "hard day's work" and the absolute necessity of getting a job done right the first time—because in the physical world, a mistake can be costly.
+In the trades, you learn quickly that there is no undo button. If you seal a driveway or set a pool foundation incorrectly, you’re spending the next week fixing a costly mistake. My first job was between 50-84 hours a week of manual labor. All I knew was the crew I worked on, and couldn't wait for my hot shower & cold bed only to do it all over again the next day. The biggest lesson I took away wasn't how to fill a crack in asphalt it was ownership.
 
-But I always had a tinkering spirit. Whether it was taking apart old PCs or gaming, the logic of systems always called to me. 
+### The Tinkerer’s Spirit
+I spent years in logistics, CNC machining, and even considered physical therapy. I loved biology and pharmacology because I’ve always been obsessed with how complex systems work. But during the 12-hour COVID shifts in the machine shop, I realized my "tinkering" belonged in the digital world.
 
-### The Transition
-I realized that the same "troubleshooting" mindset I used in the trades applied perfectly to infrastructure. Instead of fixing a physical leak, I’m now fixing a data leak. Instead of building a physical foundation, I’m deploying a **Terraform** template to build a digital one.
+### The First Handshake
+I dropped out of my first semester of college because life happened, but that single semester was enough to land me a Help Desk role. I went from 12-hour shifts on a shop floor to 8-hour shifts at a desk, and I felt like I had found a cheat code. I started exploring everything: TryHackMe, HackTheBox, and GRC. 
 
-### Why Cloud?
-The scale is what hooked me. The idea that I can write a few lines of code and spin up an entire global environment in **Azure** is, frankly, like magic. This blog will be my journal as I navigate WGU, certifications, and the ever-evolving world of Cloud Architecture.
+But I found myself bored with just analyzing. I wanted to build
+
+### Why Cloud Architecture?
+I can't pinpoint the exact moment I chose Cloud, but I remember the feeling of the Cloud Resume Challenge. It was the first time a technical project made me feel the same way a hard day in the trades did. It was difficult, it required a foundation, and if you messed up the networking, the whole thing collapsed. 
+
+I've trading my shovel for a mopuse & keyboard, but the mindset is the same: **Do it right the first time.**

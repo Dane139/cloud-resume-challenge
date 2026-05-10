@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import Header from 'components/Header';
+import Footer from 'components/Footer';
 import { Outlet, useLocation } from "react-router-dom";
 import 'css/default.css';
 
@@ -21,11 +22,12 @@ export default function Layout() {
   }, [location]);
 
   return (
-    <>
+    <div className="site_container">
       <Header />
       <div className="content_wrap">
         <Outlet />
       </div>
-    </>
+      <Footer /> 
+    </div>
   );
 }

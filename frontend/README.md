@@ -1,8 +1,8 @@
 # Frontend Architecture & Setup
 
-This directory contains the frontend code for the Cloud Resume Challenge. The application is a Single Page Application (SPA) designed to serve as a comprehensive professional portfolio, featuring a main home landing page, a dedicated about page, a technical blog, a project showcase, and a data-driven resume.
+This directory contains the frontend code for the Cloud Resume Challenge. The application is a React-based Single Page Application (SPA) designed to serve as a comprehensive professional portfolio, featuring a modular architecture that separates content (Markdown) from presentation (React).
 
-## Tech Stack
+## 🚀 Tech Stack
 * **Framework:** React 18+ (via Vite)
 * **Routing:** React Router v7 (Declarative routing)
 * **Styling:** Custom Vanilla CSS (Mobile-first, Glassmorphism theme)
@@ -10,22 +10,22 @@ This directory contains the frontend code for the Cloud Resume Challenge. The ap
 * **Hosting:** Azure Static Web Apps
 * **CI/CD:** GitHub Actions
 
-## Architecture & Data Flow
+## 🏗️ Architecture & Data Flow
 
-The frontend has evolved into a modular, data-driven application to ensure maintainability and separation of concerns.
+The frontend has evolved into a modular, data-driven application to ensure maintainability and high performance.
 
 ### 1. Resume Rendering (`ResumeData.js`)
-The resume view is based on the traditional Harvard Resume Template format but is rendered dynamically. 
+The resume view follows the traditional **Harvard Resume Template** format but is rendered dynamically to allow for easy updates without touching HTML tags.
 * **Data Layer:** All professional experience, education, and technical skills are stored as a JSON object in `src/data/ResumeData.js`.
 * **Component Layer:** React components (`ResumePage.jsx`, `ResumeSectionItem.jsx`) map this data to the DOM.
 
-### 2. Project & Blog Pipeline (Local JSON Model)
-To optimize performance and simplify the Azure deployment, we have transitioned from runtime fetching of Markdown files to a **Build-Phase JSON Generation** model.
-* **Pre-build Script:** A Node.js script (`generateProjects.cjs`) processes Markdown files in the `/public/data/` directories.
-* **Data Sync:** This script compiles metadata and content into `src/data/projectsData.json` and `blogData.json`.
-* **State Management:** Components like `HomePage.jsx` and `ProjectsPage.jsx` import these JSON files directly, allowing for instant rendering and easy sorting/filtering.
+### 2. Unified Content Pipeline (`generateProjects.cjs`)
+To optimize performance and simplify the Azure deployment, we have transitioned to a **Build-Phase JSON Generation** model. This eliminates the need for the browser to fetch multiple files at runtime.
+* **The Process:** A Node.js script processes Markdown files located in the `backend/` directory.
+* **Data Sync:** The script parses frontmatter (metadata) and body content, compiling them into `src/data/projectsData.json` and `blogData.json`.
+* **Performance:** By importing these JSON files directly into components like `HomePage.jsx`, we achieve instant rendering and seamless client-side filtering.
 
-## Local Development Setup
+## 💻 Local Development Setup
 
 ### Prerequisites
 * Node.js & npm
@@ -167,16 +167,24 @@ invoke render-projects
 <summary><b>Deprecated Architectures & Archive</b></summary>
 
 ### Deprecated: Python Task Runner (`invoke`)
-The project originally utilized a Python-based task runner (`invoke render-blog`, `invoke render-projects`) to compile Markdown files. This was deprecated and replaced with a Node.js script (`generateProjects.cjs`) to unify the frontend toolchain under a single language (JavaScript/Node), simplifying the CI/CD pipeline and local setup requirements.
+<p>The project originally utilized a Python-based task runner (<code>invoke render-blog</code>, <code>invoke render-projects</code>) to compile Markdown files. This required a dual-language environment (Python + Node) just to build the frontend.</p>
+<br>
+<b>The Pivot:</b> I deprecated this in favor of a native Node.js script (<code>generateProjects.cjs</code>). This unified the frontend toolchain under a single language, simplifying the CI/CD pipeline and removing the need for a Python runtime on the frontend build runner.
 
 ### Deprecated: Client-Side Markdown Fetching
-Early versions of the site used the browser `fetch` API to retrieve `.md` files from the `/public` directory at runtime. This was deprecated in favor of a build-phase generation model to:
-1. Eliminate "Flash of Unstyled Content" (FOUC).
-2. Improve SEO by making content available immediately.
-3. Allow for easier client-side sorting and filtering of data via JSON.
+<p>Early versions of the site used the browser <code>fetch</code> API to retrieve <code>.md</code> files from the <code>/public</code> directory at runtime. While simple, this led to "Flash of Unstyled Content" (FOUC) and high latency as the browser made sequential requests for every blog post.</p>
+<br>
+<b>The Pivot:</b> I moved to a Build-Phase JSON Generation model. By compiling Markdown into JSON artifacts before deployment, the data is bundled with the site. This allows for instant rendering, better SEO, and powerful client-side filtering without extra network overhead.
 
-### Deprecated: Local `http-server`
-Early technical specifications suggested using `http-server` for serving a static HTML resume. This was deprecated upon moving to a React Single Page Application (SPA) architecture, as the Vite development server provides necessary Hot Module Replacement (HMR) and handles SPA routing logic.
+### Deprecated: Local `http-server` & Manual HTML
+<p>Early technical specifications suggested using <code>http-server</code> for serving a static HTML resume. This was a "bare-metal" approach that made state management and navigation difficult to scale.</p>
+<br>
+<b>The Pivot:</b> Upon migrating to a React Single Page Application (SPA), I deprecated <code>http-server</code> in favor of the Vite Development Server. This transition provided Hot Module Replacement (HMR) and native handling of React Router's declarative navigation logic.
+
+### Deprecated: Manual JSON Management
+<p>In the "MVP" phase, <code>blogData.json</code> and <code>projectsData.json</code> were edited manually. This was highly error-prone, as a single missing comma in a large JSON file would break the entire production build.</p>
+<br>
+<b>The Pivot:</b> I implemented the Markdown-to-JSON Pipeline. This treats the <code>backend/</code> folder as the "Source of Truth." Now, the content is managed in clean Markdown files, and the JSON is strictly a machine-generated build artifact, eliminating human syntax errors.
 
 ### Original Technical Specification (Blueprint)
 * **Goal:** Create a static website that serves an HTML resume.
