@@ -4,3 +4,5 @@
 
 azure-functions
 azure-cosmos
+azure-identity
+requests
