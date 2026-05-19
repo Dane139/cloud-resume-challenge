@@ -146,3 +146,170 @@ article, .hero-card, .post-item-card, .single-post-card {
     .featured-skills-badges { flex-direction: column; align-items: center; }
     .about-profiles { flex-direction: column; align-items: center; gap: 30px; }
 }
+
+.infra-intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    color: #444;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.infra-section { margin-bottom: 60px; }
+
+.cost-dashboard-card {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 32px;
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.cost-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cost-title {
+    font-size: 1.2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #111;
+}
+
+.cost-month {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #0078d4;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cost-summary-row {
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+}
+
+.cost-stat-box {
+    flex: 1;
+    background: rgba(255,255,255,0.5);
+    border: 1px solid rgba(0,0,0,0.07);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.cost-stat-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #666;
+}
+
+.cost-stat-value {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #111;
+}
+
+.cost-progress-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.cost-progress-bar {
+    width: 100%;
+    height: 10px;
+    background: rgba(0,0,0,0.08);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.cost-progress-fill {
+    height: 100%;
+    border-radius: 999px;
+    transition: width 0.6s ease;
+}
+
+.cost-progress-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #555;
+    text-align: right;
+}
+
+.cost-chart-wrap { width: 100%; }
+
+.cost-chart-title {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #555;
+    margin-bottom: 12px;
+}
+
+.cost-updated {
+    font-size: 0.75rem;
+    color: #999;
+    text-align: right;
+    font-weight: 600;
+}
+
+.cost-loading {
+    text-align: center;
+    color: #666;
+    font-weight: 600;
+    padding: 40px;
+}
+
+.infra-teaser-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: rgba(255,255,255,0.5);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0,120,212,0.15);
+    border-radius: 999px;
+    padding: 12px 24px;
+    margin: 0 auto 40px auto;
+    width: fit-content;
+    flex-wrap: wrap;
+}
+
+.infra-teaser-text {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.infra-teaser-link {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #0078d4;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.infra-teaser-link:hover { text-decoration: underline; }
+
+@media (max-width: 600px) {
+    .cost-summary-row { flex-direction: column; }
+    .cost-stat-value { font-size: 1.2rem; }
+}

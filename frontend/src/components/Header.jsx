@@ -10,6 +10,7 @@ export default function Header() {
                 <NavLink to="/blog">Blog</NavLink>
                 <NavLink to="/projects">Projects</NavLink>
                 <NavLink to="/resume">Resume</NavLink>
+                <NavLink to="/infrastructure">Infrastructure</NavLink>
             </nav>
         </header>
     );

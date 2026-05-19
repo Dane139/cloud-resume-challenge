@@ -10,6 +10,7 @@ import ResumePage from './pages/ResumePage'
 import ProjectsPage from './pages/ProjectsPage'
 import ProjectPage from './pages/ProjectPage'
 import PostPage from './pages/PostPage'
+import InfrastructurePage from 'pages/InfrastructurePage';
 
 createRoot(document.querySelector('main')).render(
   <StrictMode>
@@ -23,6 +24,7 @@ createRoot(document.querySelector('main')).render(
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/project/:handle" element={<ProjectPage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/infrastructure" element={<InfrastructurePage />} />
         </Route>
       </Routes>
     </BrowserRouter>

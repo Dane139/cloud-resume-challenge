@@ -40,6 +40,16 @@ export default function HomePage() {
         </div>
       </article>
 
+      <div className="infra-teaser-card">
+        <span className="status_dot green_glow"></span>
+        <span className="infra-teaser-text">
+          Live Azure infrastructure metrics running in production
+        </span>
+        <NavLink to="/infrastructure" className="infra-teaser-link">
+          View Dashboard →
+        </NavLink>
+      </div>
+
       <section className='posts-section'>
         <h2 className="section-title">Recent Posts</h2>
         {sortedPosts.slice(0, 3).map((post) => (
