@@ -73,7 +73,10 @@ def cost_summary(req: func.HttpRequest) -> func.HttpResponse:
             "dataset": {
                 "granularity": "None",
                 "aggregation": {"totalCost": {"name": "Cost", "function": "Sum"}},
-                "grouping": [{"type": "Dimension", "name": "ServiceName"}]
+                "grouping": [
+                    {"type": "Dimension", "name": "ResourceGroupName"},
+                    {"type": "Dimension", "name": "ServiceName"}
+                ]
             }
         }
 
@@ -88,21 +91,38 @@ def cost_summary(req: func.HttpRequest) -> func.HttpResponse:
         rows = data.get("properties", {}).get("rows", [])
         services = []
         total = 0.0
+        resource_groups = {}
 
         for row in rows:
             cost = round(float(row[0]), 4)
-            name = row[1] if row[1] else "Other"
+            resource_group = row[1] if row[1] else "Other"
+            service = row[2] if row[2] else "Other"
+
             if cost > 0:
-                services.append({"service": name, "cost": cost})
+                services.append({
+                    "service": service,
+                    "resourceGroup": resource_group,
+                    "cost": cost
+                })
                 total += cost
 
+                if resource_group not in resource_groups:
+                    resource_groups[resource_group] = 0.0
+                resource_groups[resource_group] += cost
+
         services.sort(key=lambda x: x["cost"], reverse=True)
+
+        rg_breakdown = [
+            {"resourceGroup": rg, "cost": round(cost, 2)}
+            for rg, cost in sorted(resource_groups.items(), key=lambda x: x[1], reverse=True)
+        ]
 
         result = {
             "total": round(total, 2),
             "budget": 200,
             "month": now.strftime("%B %Y"),
-            "services": services[:8],
+            "services": services[:12],
+            "resourceGroups": rg_breakdown,
             "updated": now.strftime("%Y-%m-%dT%H:%M:%SZ")
         }
 
