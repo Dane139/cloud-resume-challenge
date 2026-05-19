@@ -5,6 +5,8 @@ const AZURE_BLUE = '#0078d4';
 const AZURE_BLUE_LIGHT = '#50a8f0';
 const RG_COLORS = ['#0078d4', '#50a8f0', '#00b294', '#ffb900', '#e74856', '#8764b8', '#ef6950', '#00b7c3'];
 
+const round = (num, decimals) => Math.round(num * 10 ** decimals) / 10 ** decimals;
+
 const CustomTooltip = ({ active, payload }) => {
     if (active && payload && payload.length) {
         return (
@@ -46,7 +48,15 @@ export default function CostDashboard() {
 
     const filteredServices = data ? (
         selectedRG === 'All'
-            ? data.services
+            ? Object.values(
+                data.services.reduce((acc, s) => {
+                    if (!acc[s.service]) {
+                        acc[s.service] = { service: s.service, cost: 0 };
+                    }
+                    acc[s.service].cost = round(acc[s.service].cost + s.cost, 4);
+                    return acc;
+                }, {})
+              ).sort((a, b) => b.cost - a.cost)
             : data.services.filter(s => s.resourceGroup === selectedRG)
     ) : [];
 
