@@ -119,7 +119,7 @@ def cost_summary(req: func.HttpRequest) -> func.HttpResponse:
 
         result = {
             "total": round(total, 2),
-            "budget": 200,
+            "budget": 50,
             "month": now.strftime("%B %Y"),
             "services": services[:12],
             "resourceGroups": rg_breakdown,
