@@ -7,12 +7,20 @@ import { NavLink } from "react-router-dom";
 
 export default function HomePage() {
   const sortedPosts = [...blogData].sort((a, b) => new Date(b.date) - new Date(a.date));
-  const featuredSkills = ["Microsoft Azure", "Terraform", "Splunk (SIEM)", "PowerShell", "Entra ID"];
+  const featuredSkills = [
+    "Microsoft Azure",
+    "Terraform",
+    "Entra ID",
+    "PowerShell",
+    "Nerdio / AVD",
+    "Python",
+    "Azure OpenAI",
+  ];
 
   return (
     <div className="content_wrap">
-      <h1 className="page_header">Dane Willms's Personal Website</h1>
-      
+      <h1 className="page_header">Dane Willms</h1>
+
       <ViewCounter />
 
       <article className="hero-card">
@@ -20,12 +28,13 @@ export default function HomePage() {
           <img src={dane_willms} alt="Dane Willms" className="profile-image" />
         </div>
 
-        <h2 className="hero-title">Junior Cloud Engineer</h2>
-        
+        <h2 className="hero-title">Azure Administrator</h2>
+
         <p className="hero-bio">
-          Passionate about cloud automation and infrastructure. I combine a strong foundation 
-          in IT troubleshooting with hands-on project work in Azure administration, 
-          Terraform deployments, and identity management.
+          I build and automate cloud infrastructure using Terraform and Azure — turning repeatable
+          tasks into code and manual workflows into scalable solutions. Currently managing
+          multi-tenant AVD environments via Nerdio and shipping lab projects that span Azure
+          Functions, Azure OpenAI, and identity at scale with Entra ID.
         </p>
 
         <div className="featured-skills-badges">
@@ -50,12 +59,12 @@ export default function HomePage() {
         </NavLink>
       </div>
 
-      <section className='posts-section'>
+      <section className="posts-section">
         <h2 className="section-title">Recent Posts</h2>
         {sortedPosts.slice(0, 3).map((post) => (
           <PostItem key={post.handle} post={post} />
         ))}
       </section>
     </div>
-  )
+  );
 }

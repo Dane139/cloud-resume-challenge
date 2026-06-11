@@ -13,7 +13,7 @@ export default function AboutPage() {
             <div className="profile-image-container">
               <img src={dane_willms} alt="Dane Willms" className="profile-image" />
             </div>
-            <span className="profile-role">Junior Cloud Engineer</span>
+            <span className="profile-role">Azure Administrator</span>
           </div>
 
           <div className="profile-group">
@@ -28,7 +28,7 @@ export default function AboutPage() {
           <h2>Hi, I'm Dane Willms.</h2>
 
           <p>
-            I am a Junior Cloud Engineer based in Brandon, FL. I don't just write code; I approach infrastructure with 
+            I am an Azure Administrator based in Brandon, FL. I don't just write code; I approach infrastructure with 
             the same grit and practical problem-solving mindset I learned working in the Wisconsin trades.
           </p>
 
