@@ -31,7 +31,7 @@ export default function ResumePage() {
                 <span className="entry-title">Jefe Consulting</span>
                 <span className="entry-meta">Apr '26 – Present</span>
               </div>
-              <span className="entry-org">Cloud Engineer</span>
+              <span className="entry-org">Cloud Administrator</span>
               <ul className="resume-list">
                 <li>Designed and deployed an AI Inventory Tracker integrating Azure Service Bus, Azure Functions, Azure SQL, Azure OpenAI, and Logic Apps — provisioned end-to-end via Terraform to automate client inventory processing workflows.</li>
                 <li>Built an Azure Website Uptime Monitor using a timer-triggered Python Azure Function (V2) with Table Storage audit logging and Azure Monitor KQL alert rules tracking availability across 15+ client-facing endpoints.</li>
@@ -45,7 +45,7 @@ export default function ResumePage() {
                 <span className="entry-title">DART Tech</span>
                 <span className="entry-meta">Mar '26 – Present</span>
               </div>
-              <span className="entry-org">Cloud Administrator | Tampa, FL</span>
+              <span className="entry-org">IT Support Services | Tampa, FL</span>
               <ul className="resume-list">
                 <li><strong>Task:</strong> Automated identity lifecycle provisioning for ~2,000 users across 8 client tenants. <strong>Tool:</strong> PowerShell & Microsoft Graph API. <strong>Impact:</strong> Eliminated manual workflows and reduced ticket backlog by standardizing Entra ID attribute management.</li>
                 <li><strong>Task:</strong> Administered multi-tenant AVD host pools. <strong>Tool:</strong> Azure Virtual Desktop & Nerdio. <strong>Impact:</strong> Maintained high-availability desktop delivery across 2,000 endpoints while resolving ~30 daily incidents via ConnectWise Manage.</li>
