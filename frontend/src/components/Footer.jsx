@@ -24,8 +24,8 @@ const Footer = () => {
             <div className="footer_content">
                 <div className="footer_info">
                     <p>© {currentYear} Dane Willms</p>
-                    <a href="mailto:hello@daneondemand.com?subject=Reaching out from daneondemand.com" className="footer_email">
-                        hello@daneondemand.com
+                    <a href="mailto:dane.willms1@gmail.com?subject=Reaching out from daneondemand.com" className="footer_email">
+                        dane.willms1@gmail.com
                     </a>
                 </div>
 
