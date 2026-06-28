@@ -28,7 +28,7 @@ export default function HomePage() {
           <img src={dane_willms} alt="Dane Willms" className="profile-image" />
         </div>
 
-        <h2 className="hero-title">Azure Administrator</h2>
+        <h2 className="hero-title">Cloud & Identity Administrator</h2>
 
         <p className="hero-bio">
           I build and automate cloud infrastructure using Terraform and Azure — turning repeatable

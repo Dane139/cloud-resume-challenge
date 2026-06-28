@@ -3,8 +3,8 @@ const ResumeData = {
     name: "Dane Willms",
     contact: {
       address: "Tampa, FL",
-      email: "hello@daneondemand.com",
-      phone: "414-210-7636",
+      email: "dane.willms1@gmail.com",
+      phone: "813-644-2252",
     },
   },
   sections: {
@@ -20,31 +20,22 @@ const ResumeData = {
     experience: [
       {
         id: 2,
-        title: "Jefe Consulting",
-        subtitle: "Cloud Engineer",
-        location: "",
-        duration: "Apr '26 – Present",
+        title: "DART Tech",
+        subtitle: "Cloud & Identity Administrator",
+        location: "Tampa, FL",
+        duration: "Mar '26 – Present",
         details: [
           "Designed and deployed an AI Inventory Tracker integrating Azure Service Bus, Azure Functions, Azure SQL, Azure OpenAI, and Logic Apps — provisioned end-to-end via Terraform to automate client inventory processing workflows.",
           "Built an Azure Website Uptime Monitor using a timer-triggered Python Azure Function (V2) with Table Storage audit logging and Azure Monitor KQL alert rules tracking availability across 15+ client-facing endpoints.",
           "Automated cloud cost governance by deploying an Azure Cost Visibility Dashboard via Terraform with Cost Management budget alerts, Logic Apps notifications, and Azure Workbooks backed by Log Analytics, reducing monthly spend by 20%.",
           "Provisioned geo-redundant backup platform across 3 Azure Blob containers via Terraform with GRS replication, versioning, and 30-day soft-delete; built Logic Apps workflow delivering daily backup confirmation emails to stakeholders.",
-        ],
-      },
-      {
-        id: 3,
-        title: "DART Tech",
-        subtitle: "Cloud Administrator",
-        location: "Tampa, FL",
-        duration: "Mar '26 – Present",
-        details: [
           "Task: Automated identity lifecycle provisioning for ~2,000 users across 8 client tenants. Tool: PowerShell & Microsoft Graph API. Impact: Eliminated manual workflows and reduced ticket backlog by standardizing Entra ID attribute management.",
           "Task: Administered multi-tenant AVD host pools. Tool: Azure Virtual Desktop & Nerdio. Impact: Maintained high-availability desktop delivery across 2,000 endpoints while resolving ~30 daily incidents via ConnectWise Manage.",
           "Task: Executed cloud mailbox and permissions operations for 8 client tenants. Tool: Exchange Online PowerShell. Impact: Managed account configurations, delegation, and security changes with zero-error CLI execution.",
         ],
       },
       {
-        id: 4,
+        id: 3,
         title: "RW Baird",
         subtitle: "IT Service Desk Technician",
         location: "Milwaukee, WI",
@@ -56,7 +47,7 @@ const ResumeData = {
         ],
       },
       {
-        id: 5,
+        id: 4,
         title: "Helgesen Industries",
         subtitle: "IT Support Specialist",
         location: "Hartford, WI",
@@ -70,7 +61,7 @@ const ResumeData = {
     ],
     projects: [
       {
-        id: 6,
+        id: 5,
         title: "Multi-Site Cloud SIEM",
         subtitle: "Splunk | Terraform | Azure | SPL",
         details: [
@@ -79,7 +70,7 @@ const ResumeData = {
         ],
       },
       {
-        id: 7,
+        id: 6,
         title: "Automated Identity Infrastructure",
         subtitle: "Terraform | Azure | Active Directory | Windows Server 2025",
         details: [
@@ -87,7 +78,7 @@ const ResumeData = {
         ],
       },
       {
-        id: 8,
+        id: 7,
         title: "Automated Vulnerability Management",
         subtitle: "Nessus | Azure | PowerShell | Terraform",
         details: [
@@ -95,7 +86,7 @@ const ResumeData = {
         ],
       },
       {
-        id: 9,
+        id: 8,
         title: "Azure Cloud Resume Challenge",
         subtitle: "Azure Functions | Cosmos DB | Blob Storage | GitHub Actions | DNS",
         details: [

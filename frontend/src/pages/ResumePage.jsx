@@ -15,7 +15,7 @@ export default function ResumePage() {
             <div className="resume-contact">
               <span><MapPin size={16} /> Tampa, FL</span>
               <span>•</span>
-              <span><Phone size={16} /> (414) 210-7636</span>
+              <span><Phone size={16} /> (813) 644-2252</span>
               <span>•</span>
               <span><Mail size={16} /> hello@daneondemand.com</span>
               <span>•</span>
@@ -28,25 +28,15 @@ export default function ResumePage() {
 
             <div className="entry">
               <div className="entry-header">
-                <span className="entry-title">Jefe Consulting</span>
-                <span className="entry-meta">Apr '26 – Present</span>
+                <span className="entry-title">DART Tech</span>
+                <span className="entry-meta">Mar '26 – Present</span>
               </div>
-              <span className="entry-org">Cloud Administrator</span>
+              <span className="entry-org">Cloud & Identity Administrator | Tampa, FL</span>
               <ul className="resume-list">
                 <li>Designed and deployed an AI Inventory Tracker integrating Azure Service Bus, Azure Functions, Azure SQL, Azure OpenAI, and Logic Apps — provisioned end-to-end via Terraform to automate client inventory processing workflows.</li>
                 <li>Built an Azure Website Uptime Monitor using a timer-triggered Python Azure Function (V2) with Table Storage audit logging and Azure Monitor KQL alert rules tracking availability across 15+ client-facing endpoints.</li>
                 <li>Automated cloud cost governance by deploying an Azure Cost Visibility Dashboard via Terraform with Cost Management budget alerts, Logic Apps notifications, and Azure Workbooks backed by Log Analytics, reducing monthly spend by 20%.</li>
                 <li>Provisioned geo-redundant backup platform across 3 Azure Blob containers via Terraform with GRS replication, versioning, and 30-day soft-delete; built Logic Apps workflow delivering daily backup confirmation emails to stakeholders.</li>
-              </ul>
-            </div>
-
-            <div className="entry">
-              <div className="entry-header">
-                <span className="entry-title">DART Tech</span>
-                <span className="entry-meta">Mar '26 – Present</span>
-              </div>
-              <span className="entry-org">IT Support Services | Tampa, FL</span>
-              <ul className="resume-list">
                 <li><strong>Task:</strong> Automated identity lifecycle provisioning for ~2,000 users across 8 client tenants. <strong>Tool:</strong> PowerShell & Microsoft Graph API. <strong>Impact:</strong> Eliminated manual workflows and reduced ticket backlog by standardizing Entra ID attribute management.</li>
                 <li><strong>Task:</strong> Administered multi-tenant AVD host pools. <strong>Tool:</strong> Azure Virtual Desktop & Nerdio. <strong>Impact:</strong> Maintained high-availability desktop delivery across 2,000 endpoints while resolving ~30 daily incidents via ConnectWise Manage.</li>
                 <li><strong>Task:</strong> Executed cloud mailbox and permissions operations for 8 client tenants. <strong>Tool:</strong> Exchange Online PowerShell. <strong>Impact:</strong> Managed account configurations, delegation, and security changes with zero-error CLI execution.</li>
